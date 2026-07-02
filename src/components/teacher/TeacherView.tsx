@@ -66,10 +66,10 @@ export default function TeacherView({ lang }: { lang: Lang }) {
           <button key={item.key} onClick={() => setSection(item.key)} style={{
             display: 'flex', alignItems: 'center', gap: 10,
             width: '100%', padding: '10px 20px', textAlign: 'start',
-            background: section === item.key ? '#f3f0ff' : 'transparent',
-            color: section === item.key ? '#7c3aed' : 'var(--text-2)',
+            background: section === item.key ? '#f5ede3' : 'transparent',
+            color: section === item.key ? '#a07858' : 'var(--text-2)',
             border: 'none', cursor: 'pointer', fontSize: 14, fontWeight: section === item.key ? 500 : 400,
-            borderInlineStart: section === item.key ? '3px solid #7c3aed' : '3px solid transparent',
+            borderInlineStart: section === item.key ? '3px solid #a07858' : '3px solid transparent',
           }}>
             {icons[item.key]}
             <span>{item.label}</span>
@@ -131,7 +131,7 @@ function TeacherDashboard({ lang, cancelledSessions, onCancel }: {
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 24 }}>
         {[
-          { label: 'Cours actifs', value: '4', color: '#7c3aed' },
+          { label: 'Cours actifs', value: '4', color: '#a07858' },
           { label: 'Élèves total', value: '39', color: '#0d7a5f' },
           { label: 'Séances / sem.', value: '7', color: '#0891b2' },
           { label: 'Taux présence', value: '87%', color: '#d97706' },
@@ -264,7 +264,7 @@ function TeacherStudents({ lang, attendance, setAttendance }: {
                   <ProgressBar value={s.progress} />
                 </td>
                 <td style={{ padding: '12px 16px', fontSize: 13 }}>
-                  <Chip color="#7c3aed">{s.level}</Chip>
+                  <Chip color="#a07858">{s.level}</Chip>
                 </td>
                 <td style={{ padding: '12px 16px', color: 'var(--text-2)', fontSize: 13 }}>{s.lastSeen}</td>
               </tr>
@@ -322,7 +322,7 @@ function TeacherAttendance({ lang, attendance, setAttendance }: {
       </div>
       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
         <button onClick={saveAll} style={{
-          padding: '10px 24px', background: '#7c3aed', color: '#fff',
+          padding: '10px 24px', background: '#a07858', color: '#fff',
           border: 'none', borderRadius: 8, cursor: 'pointer', fontSize: 14, fontWeight: 500
         }}>Enregistrer les présences</button>
         {saved && <span style={{ color: '#0d7a5f', fontSize: 14 }}>✓ Enregistré avec succès</span>}
@@ -340,7 +340,7 @@ function TeacherMaterials({ lang }: { lang: Lang }) {
         <h2 style={{ fontSize: 20, fontWeight: 500 }}>Supports de cours</h2>
         <button onClick={() => setUploaded(true)} style={{
           display: 'flex', alignItems: 'center', gap: 8, padding: '10px 18px',
-          background: '#7c3aed', color: '#fff', border: 'none', borderRadius: 8,
+          background: '#a07858', color: '#fff', border: 'none', borderRadius: 8,
           cursor: 'pointer', fontSize: 14
         }}>
           <Upload size={15} /> Ajouter un support
@@ -408,9 +408,9 @@ function TeacherMessaging({ lang, msgs, messageText, setMessageText, sendMessage
               display: 'flex', alignItems: 'center', gap: 10, width: '100%', padding: '12px 14px',
               textAlign: 'start', border: 'none', cursor: 'pointer',
               borderBottom: '1px solid var(--border)',
-              background: selected === s.id ? '#f3f0ff' : 'transparent',
+              background: selected === s.id ? '#f5ede3' : 'transparent',
             }}>
-              <AvatarSmall initials={s.initials} color="#7c3aed" />
+              <AvatarSmall initials={s.initials} color="#a07858" />
               <div>
                 <div style={{ fontSize: 13, fontWeight: 500 }}>{s.name.split(' ')[0]}</div>
                 <div style={{ fontSize: 11, color: 'var(--text-3)' }}>{s.course}</div>
@@ -433,7 +433,7 @@ function TeacherMessaging({ lang, msgs, messageText, setMessageText, sendMessage
               }}>
                 <div style={{
                   maxWidth: '70%', padding: '10px 13px', borderRadius: 10, fontSize: 13,
-                  background: m.fromRole === 'teacher' ? '#7c3aed' : 'var(--surface-2)',
+                  background: m.fromRole === 'teacher' ? '#a07858' : 'var(--surface-2)',
                   color: m.fromRole === 'teacher' ? '#fff' : 'var(--text)',
                 }}>
                   {m.content}
@@ -450,7 +450,7 @@ function TeacherMessaging({ lang, msgs, messageText, setMessageText, sendMessage
               placeholder="Écrire un message..."
               style={{ flex: 1, padding: '9px 13px', border: '1px solid var(--border)', borderRadius: 7, fontSize: 13, background: 'var(--surface)', color: 'var(--text)', outline: 'none' }}
             />
-            <button onClick={sendMessage} style={{ padding: '9px 14px', background: '#7c3aed', color: '#fff', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
+            <button onClick={sendMessage} style={{ padding: '9px 14px', background: '#a07858', color: '#fff', border: 'none', borderRadius: 7, cursor: 'pointer' }}>
               <Send size={15} />
             </button>
           </div>
@@ -475,7 +475,7 @@ function TeacherNotifications({ lang }: { lang: Lang }) {
         {notifs.map((n, i) => (
           <div key={i} style={{
             display: 'flex', gap: 14, padding: '14px 18px',
-            background: n.unread ? '#f3f0ff' : 'var(--surface)',
+            background: n.unread ? '#f5ede3' : 'var(--surface)',
             border: `1px solid ${n.unread ? '#c4b5fd' : 'var(--border)'}`,
             borderRadius: 'var(--radius)'
           }}>
@@ -522,7 +522,7 @@ function ProgressBar({ value }: { value: number }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
       <div style={{ width: 80, height: 5, background: 'var(--border)', borderRadius: 3, overflow: 'hidden' }}>
-        <div style={{ width: `${value}%`, height: '100%', background: '#7c3aed', borderRadius: 3 }} />
+        <div style={{ width: `${value}%`, height: '100%', background: '#a07858', borderRadius: 3 }} />
       </div>
       <span style={{ fontSize: 12, color: 'var(--text-2)' }}>{value}%</span>
     </div>

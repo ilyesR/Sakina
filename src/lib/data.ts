@@ -117,7 +117,7 @@ export const COURSES: Course[] = [
     students: 12,
     schedule: 'Lun & Jeu 18h',
     nextSession: 'Lundi 7 juil. 18h00',
-    color: '#0d7a5f',
+    color: '#c4907a',
     description: 'Apprendre l\'alphabet, la lecture et les bases de la langue arabe dans un cadre bienveillant.',
   },
   {
@@ -131,7 +131,7 @@ export const COURSES: Course[] = [
     students: 8,
     schedule: 'Sam 10h',
     nextSession: 'Samedi 5 juil. 10h00',
-    color: '#7c3aed',
+    color: '#a07858',
     description: 'Méthode ludique et interactive pour initier les enfants à la langue arabe.',
   },
   {
@@ -145,7 +145,7 @@ export const COURSES: Course[] = [
     students: 9,
     schedule: 'Mar & Ven 19h',
     nextSession: 'Mardi 8 juil. 19h00',
-    color: '#0891b2',
+    color: '#9a7888',
     description: 'Consolider la lecture et gagner en fluidité pour lire sans hésitation.',
   },
   {
@@ -159,7 +159,7 @@ export const COURSES: Course[] = [
     students: 7,
     schedule: 'Mer 20h',
     nextSession: 'Mercredi 9 juil. 20h00',
-    color: '#059669',
+    color: '#b89080',
     description: 'S\'exprimer avec aisance dans les situations courantes de la vie quotidienne.',
   },
   {
@@ -173,7 +173,7 @@ export const COURSES: Course[] = [
     students: 11,
     schedule: 'Dim 15h',
     nextSession: 'Dimanche 6 juil. 15h00',
-    color: '#d97706',
+    color: '#c4907a',
     description: 'Comprendre la grammaire arabe à travers les versets coraniques.',
   },
   {
@@ -187,7 +187,7 @@ export const COURSES: Course[] = [
     students: 15,
     schedule: 'Lun, Mer & Ven 17h',
     nextSession: 'Lundi 7 juil. 17h00',
-    color: '#7c3aed',
+    color: '#a07858',
     description: 'Programme structuré de mémorisation avec révision et correction du cheikh.',
   },
   {
@@ -215,7 +215,7 @@ export const COURSES: Course[] = [
     students: 10,
     schedule: 'Jeu 20h',
     nextSession: 'Jeudi 10 juil. 20h00',
-    color: '#dc2626',
+    color: '#b06868',
     description: 'Comprendre le sens profond des versets coraniques avec les sources authentiques.',
   },
   {
@@ -229,7 +229,7 @@ export const COURSES: Course[] = [
     students: 14,
     schedule: 'Dim 10h',
     nextSession: 'Dimanche 6 juil. 10h00',
-    color: '#2563eb',
+    color: '#7a8a9a',
     description: 'Étudier les fondements de la croyance islamique et l\'unicité d\'Allah.',
   },
   {
@@ -243,7 +243,7 @@ export const COURSES: Course[] = [
     students: 13,
     schedule: 'Mer 18h',
     nextSession: 'Mercredi 9 juil. 18h00',
-    color: '#0891b2',
+    color: '#9a7888',
     description: 'Découvrir les 99 noms d\'Allah et leur signification profonde.',
   },
 ]

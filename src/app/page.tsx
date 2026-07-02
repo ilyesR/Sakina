@@ -11,9 +11,9 @@ import { BookOpen, GraduationCap, LayoutDashboard, ChevronDown, Globe, Star } fr
 type MainSection = 'app' | 'catalog'
 
 const roleConfig = {
-  student: { label: 'Élève', labelAr: 'طالبة', color: '#0d7a5f', icon: <GraduationCap size={16} /> },
-  teacher: { label: 'Professeur', labelAr: 'أستاذة', color: '#7c3aed', icon: <BookOpen size={16} /> },
-  admin: { label: 'Admin', labelAr: 'مدير', color: '#2563eb', icon: <LayoutDashboard size={16} /> },
+  student: { label: 'Élève', labelAr: 'طالبة', color: '#c4907a', icon: <GraduationCap size={16} /> },
+  teacher: { label: 'Professeur', labelAr: 'أستاذة', color: '#a07858', icon: <BookOpen size={16} /> },
+  admin: { label: 'Admin', labelAr: 'مدير', color: '#7a8a9a', icon: <LayoutDashboard size={16} /> },
 }
 
 export default function Home() {
@@ -46,16 +46,23 @@ export default function Home() {
         gap: 16, position: 'sticky', top: 0, zIndex: 40
       }}>
         {/* Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginInlineEnd: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginInlineEnd: 12 }}>
           <div style={{
-            width: 36, height: 36, borderRadius: 10, background: 'var(--primary)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center'
+            width: 38, height: 38, borderRadius: '50%',
+            background: 'linear-gradient(135deg, #c4907a 0%, #a07060 100%)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            boxShadow: '0 2px 8px rgba(196,144,122,0.3)'
           }}>
-            <Star size={18} color="#fff" fill="#fff" />
+            <Star size={17} color="#fff" fill="#fff" />
           </div>
-          <span style={{ fontSize: 18, fontWeight: 600, color: 'var(--primary)' }}>
-            {lang === 'ar' ? 'سكينة' : 'Sakina'}
-          </span>
+          <div>
+            <div style={{ fontSize: 16, fontWeight: 700, color: 'var(--primary)', letterSpacing: '0.04em', lineHeight: 1.1 }}>
+              INSTITUT {lang === 'ar' ? 'سكينة' : 'SAKINA'}
+            </div>
+            <div style={{ fontSize: 10, color: 'var(--text-3)', letterSpacing: '0.06em' }}>
+              {lang === 'ar' ? 'التعلم في سكينة' : 'Apprendre en toute Sérénité'}
+            </div>
+          </div>
         </div>
 
         {/* Nav */}

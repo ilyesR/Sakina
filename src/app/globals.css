@@ -2,22 +2,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f8f7f4;
+  --bg: #faf8f6;
   --surface: #ffffff;
-  --surface-2: #f3f2ef;
-  --border: #e5e3de;
-  --text: #1a1a1a;
-  --text-2: #6b6b6b;
-  --text-3: #9e9e9e;
-  --primary: #0d7a5f;
-  --primary-light: #e8f5f1;
-  --primary-hover: #0a6550;
-  --amber: #d97706;
-  --amber-light: #fef3c7;
-  --red: #dc2626;
-  --red-light: #fee2e2;
-  --blue: #2563eb;
-  --blue-light: #dbeafe;
+  --surface-2: #f5f2ef;
+  --border: #e8e2dc;
+  --text: #2a1f1a;
+  --text-2: #7a6b63;
+  --text-3: #b0a099;
+  --primary: #c4907a;
+  --primary-light: #f9ede8;
+  --primary-hover: #b07a65;
+  --red: #c0605a;
+  --red-light: #fdecea;
   --radius: 10px;
   --radius-lg: 14px;
 }
@@ -27,7 +23,7 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Geist', system-ui, -apple-system, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 15px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -35,20 +31,12 @@ body {
 
 [dir="rtl"] body,
 [dir="rtl"] {
-  font-family: 'Noto Naskh Arabic', 'Geist', system-ui, sans-serif;
+  font-family: 'Noto Naskh Arabic', system-ui, sans-serif;
 }
 
-[dir="rtl"] .ltr-only { display: none; }
-[dir="ltr"] .rtl-only { display: none; }
-
-/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
 
-/* Transitions */
 * { transition-property: color, background-color, border-color, opacity, transform; transition-duration: 150ms; }
-
-/* RTL flip helpers */
-[dir="rtl"] .rtl-flip { transform: scaleX(-1); }

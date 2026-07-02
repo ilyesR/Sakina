@@ -32,10 +32,10 @@ export default function AdminView({ lang }: { lang: Lang }) {
           <button key={item.key} onClick={() => setSection(item.key)} style={{
             display: 'flex', alignItems: 'center', gap: 10, width: '100%',
             padding: '10px 20px', textAlign: 'start', border: 'none', cursor: 'pointer', fontSize: 14,
-            background: section === item.key ? '#eff6ff' : 'transparent',
-            color: section === item.key ? '#2563eb' : 'var(--text-2)',
+            background: section === item.key ? '#edf0f5' : 'transparent',
+            color: section === item.key ? '#7a8a9a' : 'var(--text-2)',
             fontWeight: section === item.key ? 500 : 400,
-            borderInlineStart: section === item.key ? '3px solid #2563eb' : '3px solid transparent',
+            borderInlineStart: section === item.key ? '3px solid #7a8a9a' : '3px solid transparent',
           }}>
             {item.icon}
             <span>{item.label}</span>
@@ -107,7 +107,7 @@ function OverviewSection({ lang }: { lang: Lang }) {
               display: 'flex', alignItems: 'center', gap: 12, padding: '12px 18px',
               borderBottom: i < TEACHERS.length - 1 ? '1px solid var(--border)' : 'none'
             }}>
-              <MiniAvatar initials={t.initials} color="#2563eb" />
+              <MiniAvatar initials={t.initials} color="#7a8a9a" />
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 13, fontWeight: 500 }}>{t.name}</div>
                 <div style={{ fontSize: 12, color: 'var(--text-2)' }}>{t.courses} cours · {t.students} élèves</div>
@@ -201,7 +201,7 @@ function TeachersSection({ lang }: { lang: Lang }) {
             borderRadius: 'var(--radius-lg)', padding: '22px 24px'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
-              <MiniAvatar initials={teacher.initials} color="#2563eb" size={46} />
+              <MiniAvatar initials={teacher.initials} color="#7a8a9a" size={46} />
               <div>
                 <div style={{ fontSize: 15, fontWeight: 500 }}>{teacher.name}</div>
                 <div style={{ fontSize: 13, color: '#d97706' }}>★ {teacher.rating} / 5</div>
@@ -214,7 +214,7 @@ function TeachersSection({ lang }: { lang: Lang }) {
                 { label: 'Séances/mois', value: teacher.sessions },
               ].map(s => (
                 <div key={s.label} style={{ textAlign: 'center', padding: '10px 6px', background: 'var(--surface-2)', borderRadius: 8 }}>
-                  <div style={{ fontSize: 20, fontWeight: 500, color: '#2563eb' }}>{s.value}</div>
+                  <div style={{ fontSize: 20, fontWeight: 500, color: '#7a8a9a' }}>{s.value}</div>
                   <div style={{ fontSize: 11, color: 'var(--text-2)', marginTop: 2 }}>{s.label}</div>
                 </div>
               ))}
@@ -271,13 +271,13 @@ function StudentsSection({ lang }: { lang: Lang }) {
                 <td style={{ padding: '11px 14px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                     <div style={{ width: 70, height: 5, background: 'var(--border)', borderRadius: 3 }}>
-                      <div style={{ width: `${s.progress}%`, height: '100%', background: '#2563eb', borderRadius: 3 }} />
+                      <div style={{ width: `${s.progress}%`, height: '100%', background: '#7a8a9a', borderRadius: 3 }} />
                     </div>
                     <span style={{ fontSize: 12, color: 'var(--text-2)' }}>{s.progress}%</span>
                   </div>
                 </td>
                 <td style={{ padding: '11px 14px' }}>
-                  <span style={{ background: '#eff6ff', color: '#2563eb', borderRadius: 6, padding: '3px 8px', fontSize: 12 }}>{s.level}</span>
+                  <span style={{ background: '#edf0f5', color: '#7a8a9a', borderRadius: 6, padding: '3px 8px', fontSize: 12 }}>{s.level}</span>
                 </td>
                 <td style={{ padding: '11px 14px', color: 'var(--text-2)' }}>{s.lastSeen}</td>
               </tr>
@@ -324,10 +324,10 @@ function ProgressSection({ lang }: { lang: Lang }) {
               borderBottom: i < 4 ? '1px solid var(--border)' : 'none'
             }}>
               <span style={{ width: 22, fontWeight: 500, color: i < 3 ? '#d97706' : 'var(--text-3)', fontSize: 14 }}>#{i + 1}</span>
-              <MiniAvatar initials={s.initials} color="#2563eb" />
+              <MiniAvatar initials={s.initials} color="#7a8a9a" />
               <span style={{ flex: 1, fontSize: 13, fontWeight: 500 }}>{s.name}</span>
               <span style={{ fontSize: 13, color: 'var(--text-2)' }}>{s.course}</span>
-              <span style={{ fontSize: 14, fontWeight: 500, color: '#2563eb' }}>{s.progress}%</span>
+              <span style={{ fontSize: 14, fontWeight: 500, color: '#7a8a9a' }}>{s.progress}%</span>
             </div>
           ))}
         </div>
@@ -337,7 +337,7 @@ function ProgressSection({ lang }: { lang: Lang }) {
 }
 
 // ─── HELPERS ─────────────────────────────────────────────────
-function MiniAvatar({ initials, color = '#2563eb', size = 34 }: { initials: string; color?: string; size?: number }) {
+function MiniAvatar({ initials, color = '#7a8a9a', size = 34 }: { initials: string; color?: string; size?: number }) {
   return (
     <div style={{
       width: size, height: size, borderRadius: '50%', background: color + '22',

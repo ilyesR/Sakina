@@ -384,13 +384,13 @@ function AttendanceSection({ lang }: { lang: Lang }) {
 }
 
 function StatusDot({ status }: { status: string }) {
-  const colors: Record<string, string> = { present: '#059669', absent: '#dc2626', excused: '#d97706' }
+  const colors: Record<string, string> = { present: '#c4907a', absent: '#dc2626', excused: '#d97706' }
   return <div style={{ width: 8, height: 8, borderRadius: '50%', background: colors[status], flexShrink: 0 }} />
 }
 
 function StatusBadge({ status, lang }: { status: string; lang: Lang }) {
   const cfg: Record<string, { bg: string; color: string; label: string; labelAr: string }> = {
-    present: { bg: '#dcfce7', color: '#166534', label: 'Présente', labelAr: 'حاضرة' },
+    present: { bg: '#f9ede8', color: '#8a5040', label: 'Présente', labelAr: 'حاضرة' },
     absent: { bg: '#fee2e2', color: '#991b1b', label: 'Absente', labelAr: 'غائبة' },
     excused: { bg: '#fef3c7', color: '#92400e', label: 'Excusée', labelAr: 'معذورة' },
   }

@@ -41,7 +41,7 @@ export default function CourseCatalog({ lang }: { lang: Lang }) {
     <div style={{ maxWidth: 1100 }}>
       {/* Header */}
       <div style={{
-        background: 'linear-gradient(135deg, #0d7a5f 0%, #0a6550 100%)',
+        background: 'linear-gradient(135deg, #c4907a 0%, #a07060 100%)',
         borderRadius: 'var(--radius-lg)', padding: '32px 36px', marginBottom: 28, color: '#fff'
       }}>
         <h1 style={{ fontSize: 26, fontWeight: 500, marginBottom: 8 }}>

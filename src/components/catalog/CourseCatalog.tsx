@@ -38,7 +38,7 @@ export default function CourseCatalog({ lang }: { lang: Lang }) {
   ]
 
   return (
-    <div style={{ maxWidth: 1100 }}>
+    <div style={{ maxWidth: 1100, margin: '0 auto' }}>
       {/* Header */}
       <div style={{
         background: 'linear-gradient(135deg, #c4907a 0%, #a07060 100%)',
